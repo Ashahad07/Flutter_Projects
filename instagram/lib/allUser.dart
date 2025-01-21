@@ -51,7 +51,7 @@ class Alluser extends StatelessWidget {
                         children: [
                           Container(
                             margin: EdgeInsets.only(right: 10),
-                            padding: EdgeInsets.all(2),
+                            padding: EdgeInsets.all(3),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
@@ -68,16 +68,16 @@ class Alluser extends StatelessWidget {
                             ),
                             child: Container(
                               padding: EdgeInsets.all(5),
-                              child: CircleAvatar(
-                                radius: 40,
-                                backgroundImage:
-                                    NetworkImage("${allUser[index].imgUrl}"),
-                              ),
                               decoration: BoxDecoration(
                                 color: Colors.black,
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(100),
                                 ),
+                              ),
+                              child: CircleAvatar(
+                                radius: 39,
+                                backgroundImage:
+                                    NetworkImage("${allUser[index].imgUrl}"),
                               ),
                             ),
                           ),
