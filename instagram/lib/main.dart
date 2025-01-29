@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/Messager.dart';
+import 'package:instagram/Screens/Messager.dart';
 // import 'package:instagram/Posts.dart';
-import 'package:instagram/Home.dart';
+import 'package:instagram/Widgets/Home.dart';
 
 void main() {
   runApp(const MainApp());

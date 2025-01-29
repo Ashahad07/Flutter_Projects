@@ -1,4 +1,5 @@
 class Users {
+  String? name;
   String? userName;
   String? location;
   String? caption;
@@ -31,6 +32,7 @@ class Users {
 
   Users.forMessage({
     this.userName,
+    this.name,
     this.profileImage,
   });
 }

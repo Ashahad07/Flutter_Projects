@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/Messages.dart';
+import 'package:instagram/UserList.dart';
+import 'package:instagram/Widgets/Messages.dart';
 
 class Messager extends StatelessWidget {
+  List allMessages = Userlist().allMessages;
+
   // Messager Widget
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(
           "Ashahad_Shaikh",
           style: TextStyle(
@@ -34,7 +38,12 @@ class Messager extends StatelessWidget {
         ],
         backgroundColor: Colors.black,
       ),
-      body: Messages(),
+      body: ListView.builder(
+        itemCount: allMessages.length,
+        itemBuilder: (context, index) {
+          return Messages(index: index);
+        },
+      ),
     );
   }
 }
