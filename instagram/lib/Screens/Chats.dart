@@ -28,13 +28,13 @@ class Chats extends StatelessWidget {
                   "$name",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 17,
                   ),
                 ),
                 Text(
                   "$userName",
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 14,
                     color: const Color.fromARGB(255, 78, 78, 78),
                   ),
                 )

@@ -20,10 +20,9 @@ class MainApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends MainApp {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -68,7 +67,35 @@ class HomeScreen extends MainApp {
           ],
         ),
       ),
-      body: Home(), // Ensure Alluser widget is correct
+      body: Home(), // Ensure Home widget is correct
+      bottomNavigationBar: BottomNavigationBar(
+        unselectedItemColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: Colors.black,
+        fixedColor: Colors.white,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+              color: Colors.white,
+            ),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+            label: "Search",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+            label: "Search",
+          ),
+        ],
+      ),
     );
   }
 }

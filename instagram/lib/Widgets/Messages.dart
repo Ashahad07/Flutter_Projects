@@ -19,7 +19,7 @@ class Messages extends StatelessWidget {
               builder: (context) => Chats(
                 userName: allMessages[index].userName,
                 name: allMessages[index].name.length > 10
-                    ? allMessages[index].name.substring(0, 10) + "..."
+                    ? allMessages[index].name.substring(0, 8) + "..."
                     : allMessages[index].name,
                 profileImage: allMessages[index].profileImage,
               ),
