@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_application/Screens/Home.dart';
+import 'package:quiz_application/Screens/Questions.dart';
 
 class Result extends StatelessWidget {
-  const Result({super.key});
+  final correctAnsCount;
+  Result({
+    this.correctAnsCount,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +44,7 @@ class Result extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "7/10",
+                          "$correctAnsCount/10",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
@@ -80,7 +84,7 @@ class Result extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => Home(),
+                builder: (context) => Questions(),
               ),
             ),
             child: Container(
